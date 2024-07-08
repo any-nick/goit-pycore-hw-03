@@ -1,7 +1,6 @@
 import re
 
 def normalize_phone(phone_number):
-    # Видаляємо всі символи, крім цифр і '+'
     normalized_number = re.sub(r'[^\d+]', '', phone_number)
     if not normalized_number.startswith('+38') and normalized_number.startswith("38"):
         normalized_number = '+' + normalized_number   
